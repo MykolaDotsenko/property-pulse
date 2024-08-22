@@ -11,7 +11,7 @@ const InfoBoxes = () => {
             backgroundColor: "bg-black",
           }}>
             {" "}
-            Find your dream rental property. Bookmark properties and contact
+            Find your dream comfortable rental property. Bookmark properties and contact
             owners.
           </InfoBox>
           <InfoBox
