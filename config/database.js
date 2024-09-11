@@ -1,24 +1,28 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 let connected = false;
 
 const connectDB = async () => {
-  mongoose.set("strictQuery", true);
+  mongoose.set('strictQuery', true);
 
-  // if database is already connected, DONT CONNECT AGAIN
   if (connected) {
-    console.log("MongoDB is already connected");
+    console.log('MongoDB is already connected');
     return;
   }
 
-  // connect to MongoDB
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI);
+    const conn = await mongoose.connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 30000, // Increase connection timeout
+      bufferCommands: false,           // Disable buffering of commands
+    });
+    console.log(`MongoDB connected: ${conn.connection.host}`);
     connected = true;
   } catch (error) {
-    console.log(error);
+    console.error(`Error connecting to MongoDB: ${error.message}`);
+    process.exit(1);  // Exit process on failure
   }
 };
-
 
 export default connectDB;
