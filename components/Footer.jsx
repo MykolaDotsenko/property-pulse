@@ -24,7 +24,7 @@ const currentYear = new Date().getFullYear();
           </div>
           <div>
             <p className="text-sm text-gray-700 mt-2 md:mt-0">
-              &copy; {currentYear} PropertyPulse. All rights reserved.
+              &copy; {currentYear} PropertyPulse. All rights reserved.@
             </p>
           </div>
         </div>
