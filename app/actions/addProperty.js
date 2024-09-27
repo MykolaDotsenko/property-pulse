@@ -3,7 +3,9 @@
 
 
 async function addProperty(formData) {
-    console.log(formData.getAll('amenities'));
+    //access all values from amenities
+  const amenities = formData.getAll('amenities');
+  const images = formData.getAll('images');
 }
 
 
