@@ -32,12 +32,12 @@ const PropertySchema = new Schema(
       type: Number,
       required: true,
     },
-    sqeare_feet: {
+    square_feet: {
       type: Number,
       required: true,
     },
     amenities: [{ type: String }],
-    rate: {
+    rates: {
       nightly: Number,
       weekly: Number,
       monthly: Number,
