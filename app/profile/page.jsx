@@ -4,20 +4,21 @@ import Property from "@/models/Property";
 import { getSessionUser } from "@/utils/getSessionUser";
 import profileDefault from "@/assets/images/profile.png";
 import ProfileProperties from "@/components/ProfileProperties";
+import { convertToSerializableObject } from "@/utils/convertToObject";
 
+const ProfilePage = async () => {
+  await connectDB();
 
-const ProfilePage = async() => {
-    await connectDB();
+  const sessionUser = await getSessionUser();
 
-const sessionUser = await getSessionUser();
+  const { userId } = sessionUser;
 
-const {userId} = sessionUser;
-
-if (!userId) {
+  if (!userId) {
     throw new Error("User id is required");
-}
+  }
 
-const properties = await Property.find({ owner: userId }).lean();
+  const propertiesDocs = await Property.find({ owner: userId }).lean();
+  const properties = propertiesDocs.map(convertToSerializableObject);
 
   return (
     <section className="bg-blue-50">
@@ -36,16 +37,18 @@ const properties = await Property.find({ owner: userId }).lean();
                 />
               </div>
               <h2 className="text-2xl mb-4">
-                <span className="font-bold block">Name: </span> {sessionUser.user.name}
+                <span className="font-bold block">Name: </span>{" "}
+                {sessionUser.user.name}
               </h2>
               <h2 className="text-2xl">
-                <span className="font-bold block">Email: </span> {sessionUser.user.email}
+                <span className="font-bold block">Email: </span>{" "}
+                {sessionUser.user.email}
               </h2>
             </div>
 
             <div className="md:w-3/4 md:pl-4">
               <h2 className="text-xl font-semibold mb-4">Your Listings</h2>
-             <ProfileProperties properties={properties} />
+              <ProfileProperties properties={properties} />
             </div>
           </div>
         </div>
