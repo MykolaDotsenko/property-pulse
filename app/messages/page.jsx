@@ -2,8 +2,8 @@ import connectDB from '@/config/database';
 import Message from '@/models/Message';
 import MessageCard from '@/components/MessageCard';
 import '@/models/Property';
-import { convertToSerializeableObject } from '@/utils/convertToObject';
 import { getSessionUser } from '@/utils/getSessionUser';
+import { convertToSerializableObject } from '@/utils/convertToObject';
 
 const MessagePage = async () => {
   await connectDB();
@@ -30,9 +30,9 @@ const MessagePage = async () => {
 
   // Convert to serializable object so we can pass to client component.
   const messages = [...unreadMessages, ...readMessages].map((messageDoc) => {
-    const message = convertToSerializeableObject(messageDoc);
-    message.sender = convertToSerializeableObject(messageDoc.sender);
-    message.property = convertToSerializeableObject(messageDoc.property);
+    const message = convertToSerializableObject(messageDoc);
+    message.sender = convertToSerializableObject(messageDoc.sender);
+    message.property = convertToSerializableObject(messageDoc.property);
     return message;
   });
 
