@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Property Pulse
+Property Pulse is a web application designed to simplify the process of finding, listing, and managing rental properties. This full-stack application combines cutting-edge technologies and frameworks to deliver a seamless user experience.
 
-## Getting Started
+Features
+User Authentication
 
-First, run the development server:
+Google OAuth integration via NextAuth.js.
+Secure user login and profile management.
+Property Listings
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Users can create, update, and delete property listings.
+Upload property images via Cloudinary for optimized storage.
+Add detailed property descriptions, prices, and availability.
+Search and Filtering
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Search for properties using keywords.
+Filter by location, price range, and property type.
+Interactive Maps
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Integration with Mapbox for detailed map views of property locations.
+Pinpoint properties and navigate with ease.
+Real-Time Messaging
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Internal chat functionality between users.
+Notifications for new messages and updates.
+Technologies Used
+Frontend
+Next.js: Server-side rendering for fast page loads and SEO optimization.
+React: Component-based UI development.
+Tailwind CSS: Utility-first styling for a responsive and modern design.
+Backend
+Next.js API Routes: Handles server-side logic and routes.
+MongoDB: A NoSQL database for scalable and flexible data management.
+NextAuth.js: Manages secure authentication and session handling.
+Other Integrations
+Cloudinary: Image hosting and optimization for property photos.
+Mapbox: Interactive map integration for property locations.
+Socket.io: (Optional) Real-time notifications for messages and updates.
+Project Logic
+Authentication
 
-## Learn More
+Users can log in with Google, ensuring secure access to their profiles and features.
+Property Management
 
-To learn more about Next.js, take a look at the following resources:
+Authenticated users can manage their property listings, including adding images, setting prices, and providing descriptions.
+Search Functionality
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A search bar and advanced filters allow users to find properties that match their needs.
+Messaging
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Buyers and renters can communicate via real-time chat, making negotiations easier.
+Responsive Design
 
-## Deploy on Vercel
+The app is fully responsive, providing an optimized experience across desktop, tablet, and mobile devices.
+How to Run Locally
+Clone the repository:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+bash
+Копировать код
+git clone https://github.com/MykolaDotsenko/property-pulse.git  
+cd property-pulse  
+Install dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+bash
+Копировать код
+npm install  
+Configure environment variables:
+
+Create a .env.local file in the root directory.
+Add keys for MongoDB, Cloudinary, Google OAuth, and Mapbox.
+Run the development server:
+
+bash
+Копировать код
+npm run dev  
+Open http://localhost:3000 in your browser to see the app in action.
+
+Contribution
+Contributions are welcome! Feel free to fork the repo and submit a pull request.
