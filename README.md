@@ -1,79 +1,67 @@
-Property Pulse
-Property Pulse is a web application designed to simplify the process of finding, listing, and managing rental properties. This full-stack application combines cutting-edge technologies and frameworks to deliver a seamless user experience.
+# Property Pulse  
 
-Features
-User Authentication
+**Property Pulse** is a web application designed to simplify the process of finding, listing, and managing rental properties. This full-stack application combines cutting-edge technologies and frameworks to deliver a seamless user experience.  
 
-Google OAuth integration via NextAuth.js.
-Secure user login and profile management.
-Property Listings
+## Features  
 
-Users can create, update, and delete property listings.
-Upload property images via Cloudinary for optimized storage.
-Add detailed property descriptions, prices, and availability.
-Search and Filtering
+- **User Authentication**  
+  - Google OAuth integration via NextAuth.js.  
+  - Secure user login and profile management.  
 
-Search for properties using keywords.
-Filter by location, price range, and property type.
-Interactive Maps
+- **Property Listings**  
+  - Users can create, update, and delete property listings.  
+  - Upload property images via Cloudinary for optimized storage.  
+  - Add detailed property descriptions, prices, and availability.  
 
-Integration with Mapbox for detailed map views of property locations.
-Pinpoint properties and navigate with ease.
-Real-Time Messaging
+- **Search and Filtering**  
+  - Search for properties using keywords.  
+  - Filter by location, price range, and property type.  
 
-Internal chat functionality between users.
-Notifications for new messages and updates.
-Technologies Used
-Frontend
-Next.js: Server-side rendering for fast page loads and SEO optimization.
-React: Component-based UI development.
-Tailwind CSS: Utility-first styling for a responsive and modern design.
-Backend
-Next.js API Routes: Handles server-side logic and routes.
-MongoDB: A NoSQL database for scalable and flexible data management.
-NextAuth.js: Manages secure authentication and session handling.
-Other Integrations
-Cloudinary: Image hosting and optimization for property photos.
-Mapbox: Interactive map integration for property locations.
-Socket.io: (Optional) Real-time notifications for messages and updates.
-Project Logic
-Authentication
+- **Interactive Maps**  
+  - Integration with Mapbox for detailed map views of property locations.  
+  - Pinpoint properties and navigate with ease.  
 
-Users can log in with Google, ensuring secure access to their profiles and features.
-Property Management
+- **Real-Time Messaging**  
+  - Internal chat functionality between users.  
+  - Notifications for new messages and updates.  
 
-Authenticated users can manage their property listings, including adding images, setting prices, and providing descriptions.
-Search Functionality
+## Technologies Used  
 
-A search bar and advanced filters allow users to find properties that match their needs.
-Messaging
+### Frontend  
+- **Next.js**: Server-side rendering for fast page loads and SEO optimization.  
+- **React**: Component-based UI development.  
+- **Tailwind CSS**: Utility-first styling for a responsive and modern design.  
 
-Buyers and renters can communicate via real-time chat, making negotiations easier.
-Responsive Design
+### Backend  
+- **Next.js API Routes**: Handles server-side logic and routes.  
+- **MongoDB**: A NoSQL database for scalable and flexible data management.  
+- **NextAuth.js**: Manages secure authentication and session handling.  
 
-The app is fully responsive, providing an optimized experience across desktop, tablet, and mobile devices.
-How to Run Locally
-Clone the repository:
+### Other Integrations  
+- **Cloudinary**: Image hosting and optimization for property photos.  
+- **Mapbox**: Interactive map integration for property locations.  
+- **Socket.io**: (Optional) Real-time notifications for messages and updates.  
 
-bash
-Копировать код
-git clone https://github.com/MykolaDotsenko/property-pulse.git  
-cd property-pulse  
-Install dependencies:
+## Project Logic  
 
-bash
-Копировать код
-npm install  
-Configure environment variables:
+1. **Authentication**  
+   - Users can log in with Google, ensuring secure access to their profiles and features.  
 
-Create a .env.local file in the root directory.
-Add keys for MongoDB, Cloudinary, Google OAuth, and Mapbox.
-Run the development server:
+2. **Property Management**  
+   - Authenticated users can manage their property listings, including adding images, setting prices, and providing descriptions.  
 
-bash
-Копировать код
-npm run dev  
-Open http://localhost:3000 in your browser to see the app in action.
+3. **Search Functionality**  
+   - A search bar and advanced filters allow users to find properties that match their needs.  
 
-Contribution
-Contributions are welcome! Feel free to fork the repo and submit a pull request.
+4. **Messaging**  
+   - Buyers and renters can communicate via real-time chat, making negotiations easier.  
+
+5. **Responsive Design**  
+   - The app is fully responsive, providing an optimized experience across desktop, tablet, and mobile devices.  
+
+## How to Run Locally  
+
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/MykolaDotsenko/property-pulse.git  
+   cd property-pulse  
