@@ -13,11 +13,11 @@ const FeaturedPropertyCard = ({ property }) => {
     const { rates } = property;
 
     if (rates.monthly) {
-      return `$${rates.monthly.toLocaleString()}/mo`;
+      return `€${rates.monthly.toLocaleString()}/mo`;
     } else if (rates.weekly) {
-      return `$${rates.weekly.toLocaleString()}/wk`;
+      return `€${rates.weekly.toLocaleString()}/wk`;
     } else if (rates.nightly) {
-      return `$${rates.nightly.toLocaleString()}/night`;
+      return `€${rates.nightly.toLocaleString()}/night`;
     }
   };
 
@@ -49,7 +49,7 @@ const FeaturedPropertyCard = ({ property }) => {
           <p>
             <FaRulerCombined className="inline-block mr-2" />{" "}
             {property.square_feet}{" "}
-            <span className="md:hidden lg:inline">sqft</span>
+            <span className="md:hidden lg:inline">m2</span>
           </p>
         </div>
 
